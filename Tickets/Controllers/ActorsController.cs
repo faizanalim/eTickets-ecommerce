@@ -9,8 +9,8 @@ using Tickets.Models;
 
 namespace Tickets.Controllers
 {
-	public class ActorsController : Controller
-	{
+    public class ActorsController : Controller
+    {
         private readonly IActorsService _service;
 
         public ActorsController(IActorsService service)
@@ -87,5 +87,6 @@ namespace Tickets.Controllers
             return RedirectToAction(nameof(Index));
         }
     }
+
 }
 //https://dotnethow.net/images/actors/actor-3.jpeg//
