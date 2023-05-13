@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -36,7 +37,7 @@
                         </li>
                     </ul>
 
-                    <form class="form-inline my-2 my-lg-0" asp-controller="Home" asp-action="Filter" style="padding-right: 25px;">
+                    <form class="form-inline my-2 my-lg-0" asp-controller="Movies" asp-action="Filter" style="padding-right: 25px;">
                         <input name="searchString" type="text" class="form-control" placeholder="Search for a movie..." aria-label="Recipient's username" aria-describedby="button-addon2">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
                     </form>
@@ -46,21 +47,21 @@
     </header>
     <div class="container-fluid">
         <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+@RenderBody()
+</main>
 
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2021 - eTickets
     </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - eTickets
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @await RenderSectionAsync("Scripts", required: false)
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
