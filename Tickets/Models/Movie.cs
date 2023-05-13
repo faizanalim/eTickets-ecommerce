@@ -4,12 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Tickets.Data.Base;
 using Tickets.Data.Enum;
 
 namespace Tickets.Models
 {
-	public class Movie
-	{
+	public class Movie : IEntityBase
+    {
         [Key]
         public int Id { get; set; }
 
